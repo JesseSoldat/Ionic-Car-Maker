@@ -1,0 +1,10 @@
+
+  <ion-view view-title="Cars">
+    <ion-content class="padding">
+      <div class="list card" ng-repeat='car in vm.cars' ng-click="vm.goTo(car.objectId)">
+        <div class="item item divider">{{ car.name }}</div>
+        <div class="item item-body">{{ car.year }} {{car.make}} {{car.model }}</div>
+      </div>
+    </ion-content>
+  </ion-view>
+       
