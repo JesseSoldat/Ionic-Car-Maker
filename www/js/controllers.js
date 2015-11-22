@@ -12,12 +12,13 @@ angular.module('starter.controllers', [])
 
   function activate() {
     CarService.getCars().then( function(res) {
-      console.log(res);
+      // console.log(res);
       vm.cars = res.data.results;
     });
   }
 
   function goTo(id) {
+    // console.log(id);
     $state.go('tab.car', {id: id});
   }
 
@@ -26,7 +27,17 @@ angular.module('starter.controllers', [])
 
 .controller('CarCtrl', function (CarService, $stateParams) {
 
+  console.log('CarCtrl');
+
   var vm = this;
+
+  activate();
+
+  function activate() {
+    CarService.getCar($stateParams.id).then(function (res) {
+      vm.car = res.data;
+    })
+  }
 
 })
 
@@ -35,7 +46,7 @@ angular.module('starter.controllers', [])
   vm.addCar = addCar;
 
   function addCar(car) {
-
+    console.log(car);
   }
 })
 

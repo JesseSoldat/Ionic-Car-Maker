@@ -5,6 +5,8 @@ angular.module('starter.services', [])
   var url = PARSE.URL + 'classes/car';
 
   this.getCars = getCars;
+  this.getCar = getCar;
+  this.addCar = addCar;
 
 
   function getCars() {
@@ -23,5 +25,10 @@ angular.module('starter.services', [])
     return $http.get(url + '/' + carId, PARSE.CONFIG);
   }
 
+  function addCar(carObj) {
+    var car = new Car(carObj);
+    return $http.post(url, car, PARSE.CONFIG);
+  }
 
-})
+
+});

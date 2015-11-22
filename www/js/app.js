@@ -60,13 +60,22 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   })
 
 
-
   .state('tab.car', {
     url: '/car/:id',
     views: {
-      'tab-car': {
+      'tab-cars': {
         templateUrl: 'templates/tab-car.html',
         controller: 'CarCtrl as vm'
+      }
+    }
+  })
+
+  .state('tab.add', {
+    url: '/add',
+    views: {
+      'tab-add': {
+        templateUrl: 'templates/tab-add.html',
+        controller: 'AddCrtl as vm'
       }
     }
   })

@@ -1,0 +1,9 @@
+<ion-view view-title="{{ vm.car.name }}">
+  <ion-content class="padding">
+    <div class="list card">
+      <div class="item item-body">{{ vm.car.year }} {{ vm.car.make }} {{ vm.car.model }}
+      </div>
+    </div>
+    <img ng-src="{{ vm.car.image }}" ng-show=" vm.car.image">
+  </ion-content>
+</ion-view>
