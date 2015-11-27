@@ -18,6 +18,8 @@ angular.module('starter.services', [])
     this.make = obj.make;
     this.model = obj.model;
     this.year = Number(obj.year);
+    this.color = obj.color;
+    this.image = obj.image;
     this.ionic = true;
   }
 

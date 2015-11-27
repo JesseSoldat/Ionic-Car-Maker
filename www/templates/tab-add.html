@@ -1,6 +1,6 @@
 <ion-view view-title="Add Car">
   <ion-content class="padding">
-    <form>
+    <form ng-submit="vm.addCar(car)">
       <div class="list">
         <label class="item item-input"><input type="text" placeholder="Make" ng-model="car.make"></label>
         <label class="item item-input"><input type="text" placeholder="Model" ng-model="car.model"></label>

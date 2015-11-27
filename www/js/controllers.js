@@ -27,7 +27,7 @@ angular.module('starter.controllers', [])
 
 .controller('CarCtrl', function (CarService, $stateParams) {
 
-  console.log('CarCtrl');
+  // console.log('CarCtrl');
 
   var vm = this;
 
@@ -46,7 +46,11 @@ angular.module('starter.controllers', [])
   vm.addCar = addCar;
 
   function addCar(car) {
-    console.log(car);
+    // console.log(car);
+    CarService.addCar(car).then(function (res) {
+      // console.log(res);
+      $state.go('tab.cars');
+    })
   }
 })
 
